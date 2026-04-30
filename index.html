@@ -11,6 +11,51 @@
     <title>Class Website</title>
 </head>
 <body>
+    <div class="card">
+        <h1>𝑮𝒓𝒂𝒅𝒆 10 𝑪𝒍𝒂𝒔𝒔𝒎𝒂𝒕𝒆𝒔 𝑺𝒚𝒔𝒕𝒆𝒎</h1>
+        <input type="text" id="name-input" placeholder="𝙴𝚗𝚝𝚎𝚛 𝙽𝚊𝚖𝚎">
+        <select id="section-input">
+            <option value="𝗘𝗺𝗲𝗿𝗮𝗹𝗱">Emerald</option>
+            <option value="𝗥𝘂𝗯𝘆">Ruby</option>
+            <option value="𝗦𝗮𝗽𝗽𝗵𝗶𝗿𝗲">Sapphire</option>
+            <option value="𝗧𝗼𝗽𝗮𝘇">Topaz</option>
+        </select>
+        <input type="text" id="subject-input" placeholder="𝙵𝚊𝚟𝚘𝚛𝚒𝚝𝚎 𝚂𝚞𝚋𝚓𝚎𝚌𝚝">
+
+        <div class="buttons">
+            <button class="btn-add" py-click="add_new_classmate">ᴀᴅᴅ ᴄʟᴀꜱꜱᴍᴀᴛᴇ</button>
+            <button class="btn-show" py-click="show_all_classmates">ꜱʜᴏᴡ ʟɪꜱᴛ</button>
+        </div>
+    </div>
+
+    <div class="list-card">
+        <h2>𝘾𝙡𝙖𝙨𝙨𝙢𝙖𝙩𝙚 𝙇𝙞𝙨𝙩</h2>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <h1>⋆.˚✮𝑨𝒕𝒕𝒆𝒏𝒅𝒂𝒏𝒄𝒆🎧𝑻𝒓𝒂𝒄𝒌𝒆𝒓✮˚.⋆</h1>
+            
+            <label>𑣲ꜱᴇʟᴇᴄᴛ ᴅᴀʏツ</label>
+            <select id="day-select">
+                <option value="0">𝙼𝚘𝚗𝚍𝚊𝚢(❁´◡`❁)</option>
+                <option value="1">𝚃𝚞𝚎𝚜𝚍𝚊𝚢ಥ_ಥ</option>
+                <option value="2">𝚆𝚎𝚍𝚗𝚎𝚜𝚍𝚊𝚢(^///^)</option>
+                <option value="3">𝚃𝚑𝚞𝚛𝚜𝚍𝚊𝚢(┬┬﹏┬┬)</option>
+                <option value="4">𝙵𝚛𝚒𝚍𝚊𝚢☆*: .｡. o(≧▽≦)o .｡.:*☆</option>
+            </select>
+
+            <label>ᴀʙꜱᴇɴᴄᴇꜱ ࣪𖤐.ᐟ</label>
+            <input type="number" id="absence-input" placeholder="0">
+
+            <button py-click="update_tracker">𝕊𝕦𝕓𝕞𝕚𝕥ᯓ✦</button>
+        </div>
+
+        <div id="graph-output"></div>
+
+
+
+    
     <div id="output"></div>
     <py-script src="main.py"></py-script>
 </body>
