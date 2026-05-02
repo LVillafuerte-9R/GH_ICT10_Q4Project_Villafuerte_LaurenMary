@@ -1,0 +1,51 @@
+body {
+    font-family: Arial;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a);
+    color: white;
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background: linear-gradient(90deg, red, blue);
+}
+
+.navbar ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.card, .list-card {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.1);
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px;
+    background: linear-gradient(45deg, red, blue);
+    border: none;
+    color: white;
+    border-radius: 10px;
+}
+
+#photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.photo {
+    width: 250px;
+    border-radius: 10px;
+}
