@@ -29,19 +29,17 @@ def add_new_classmate(e):
         classmates_list.append(new_student)
         
         document.getElementById("output").innerHTML = ""
-        display(f"{name} from {section} has been added to the list.", target="output")
-        
-        document.getElementById("name-input").value = ""
-        document.getElementById("subject-input").value = ""
+        display(f"{name} added!", target="output")
 
 def show_all_classmates(e):
     output_div = document.getElementById("output")
-    output_div.innerHTML = "" 
+    output_div.innerHTML = ""
     
     for student in classmates_list:
         display(student.introduce(), target='output', append=True)
 
-  days = np.array(['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'])
+# ATTENDANCE
+days = np.array(['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'])
 absences = np.array([0, 0, 0, 0, 0])
 
 def update_tracker(e):
@@ -52,19 +50,17 @@ def update_tracker(e):
         count = 0
     
     absences[day_index] = int(count)
-    
     display_graph()
 
 def display_graph():
     document.getElementById("graph-output").innerHTML = ""
     
-    plt.clf() 
-    
+    plt.clf()
     plt.figure(figsize=(6, 4))
-    plt.plot(days, absences, marker='o') 
-    plt.title('ωєєкℓу αттєη∂αη¢є (αвѕєη¢єѕ)')
-    plt.xlabel('ᴅᴀʏ')
-    plt.ylabel('ɴᴜᴍʙᴇʀ ᴏꜰ ᴀʙꜱᴇɴᴄᴇꜱ')
+    plt.plot(days, absences, marker='o')
+    plt.title('Weekly Absences')
+    plt.xlabel('Day')
+    plt.ylabel('Absences')
     plt.grid(True)
     
     display(plt, target="graph-output")
