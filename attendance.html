@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <py-config>
+        packages = ['numpy', 'matplotlib']
+    </py-config>
+
+    <meta charset="UTF-8">
+    <title>Attendance</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.3.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2024.3.1/core.js"></script>
+</head>
+
+<body>
+
+<nav class="navbar">
+    <h2 class="logo">Grade 10 ✦ Class Site</h2>
+    <ul>
+        <li><a href="index.html">Classmates</a></li>
+        <li><a href="attendance.html">Attendance</a></li>
+        <li><a href="photos.html">Photos</a></li>
+    </ul>
+</nav>
+
+<div class="card">
+    <h1>Attendance Tracker</h1>
+
+    <select id="day-select">
+        <option value="0">Monday</option>
+        <option value="1">Tuesday</option>
+        <option value="2">Wednesday</option>
+        <option value="3">Thursday</option>
+        <option value="4">Friday</option>
+    </select>
+
+    <input type="number" id="absence-input" placeholder="Absences">
+
+    <button py-click="update_tracker">Submit</button>
+</div>
+
+<div id="graph-output"></div>
+
+<py-script src="main.py"></py-script>
+
+</body>
+</html>
