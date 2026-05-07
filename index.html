@@ -1,62 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <py-config>
-        packages = ['numpy', 'matplotlib']
-    </py-config>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://pyscript.net/releases/2024.3.1/core.css" />
+
+    <title>Grade 10 Class Website</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- PyScript -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.3.1/core.css">
     <script type="module" src="https://pyscript.net/releases/2024.3.1/core.js"></script>
-    <title>Class Website</title>
+
+    <py-config>
+        packages = ["numpy", "matplotlib"]
+    </py-config>
 </head>
+
 <body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <h2 class="logo">Grade 10 ✦ ICT Website</h2>
+
+        <ul>
+            <li><a href="index.html">Classmates</a></li>
+            <li><a href="attendance.html">Attendance</a></li>
+            <li><a href="photos.html">Photos</a></li>
+        </ul>
+    </nav>
+
+    <!-- CLASSMATES -->
     <div class="card">
-        <h1>𝑮𝒓𝒂𝒅𝒆 10 𝑪𝒍𝒂𝒔𝒔𝒎𝒂𝒕𝒆𝒔 𝑺𝒚𝒔𝒕𝒆𝒎</h1>
-        <input type="text" id="name-input" placeholder="𝙴𝚗𝚝𝚎𝚛 𝙽𝚊𝚖𝚎">
+        <h1>Grade 10 Classmates System</h1>
+
+        <input type="text" id="name-input" placeholder="Enter Name">
+
         <select id="section-input">
-            <option value="𝗘𝗺𝗲𝗿𝗮𝗹𝗱">Emerald</option>
-            <option value="𝗥𝘂𝗯𝘆">Ruby</option>
-            <option value="𝗦𝗮𝗽𝗽𝗵𝗶𝗿𝗲">Sapphire</option>
-            <option value="𝗧𝗼𝗽𝗮𝘇">Topaz</option>
+            <option value="Emerald">Emerald</option>
+            <option value="Ruby">Ruby</option>
+            <option value="Sapphire">Sapphire</option>
+            <option value="Topaz">Topaz</option>
         </select>
-        <input type="text" id="subject-input" placeholder="𝙵𝚊𝚟𝚘𝚛𝚒𝚝𝚎 𝚂𝚞𝚋𝚓𝚎𝚌𝚝">
+
+        <input type="text" id="subject-input" placeholder="Favorite Subject">
 
         <div class="buttons">
-            <button class="btn-add" py-click="add_new_classmate">ᴀᴅᴅ ᴄʟᴀꜱꜱᴍᴀᴛᴇ</button>
-            <button class="btn-show" py-click="show_all_classmates">ꜱʜᴏᴡ ʟɪꜱᴛ</button>
+            <button py-click="add_new_classmate">Add Classmate</button>
+
+            <button py-click="show_all_classmates">
+                Show List
+            </button>
         </div>
     </div>
 
     <div class="list-card">
-        <h2>𝘾𝙡𝙖𝙨𝙨𝙢𝙖𝙩𝙚 𝙇𝙞𝙨𝙩</h2>
+        <h2>Classmate List</h2>
+
+        <div id="output"></div>
     </div>
 
-    <div class="container">
-        <div class="card">
-            <h1>⋆.˚✮𝑨𝒕𝒕𝒆𝒏𝒅𝒂𝒏𝒄𝒆🎧𝑻𝒓𝒂𝒄𝒌𝒆𝒓✮˚.⋆</h1>
-            
-            <label>𑣲ꜱᴇʟᴇᴄᴛ ᴅᴀʏツ</label>
-            <select id="day-select">
-                <option value="0">𝙼𝚘𝚗𝚍𝚊𝚢(❁´◡`❁)</option>
-                <option value="1">𝚃𝚞𝚎𝚜𝚍𝚊𝚢ಥ_ಥ</option>
-                <option value="2">𝚆𝚎𝚍𝚗𝚎𝚜𝚍𝚊𝚢(^///^)</option>
-                <option value="3">𝚃𝚑𝚞𝚛𝚜𝚍𝚊𝚢(┬┬﹏┬┬)</option>
-                <option value="4">𝙵𝚛𝚒𝚍𝚊𝚢☆*: .｡. o(≧▽≦)o .｡.:*☆</option>
-            </select>
-
-            <label>ᴀʙꜱᴇɴᴄᴇꜱ ࣪𖤐.ᐟ</label>
-            <input type="number" id="absence-input" placeholder="0">
-
-            <button py-click="update_tracker">𝕊𝕦𝕓𝕞𝕚𝕥ᯓ✦</button>
-        </div>
-
-        <div id="graph-output"></div>
-
-
-
-    
-    <div id="output"></div>
     <py-script src="main.py"></py-script>
+
 </body>
 </html>
