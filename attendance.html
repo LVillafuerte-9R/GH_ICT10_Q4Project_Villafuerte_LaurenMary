@@ -24,44 +24,37 @@
 <body>
 
 <nav class="navbar">
-    <h2 class="logo">Grade 10 ✦ ICT Website</h2>
+    <h2 class="logo">𝑶.𝑩. 𝑾𝒆𝒃𝒔𝒊𝒕𝒆</h2>
 
     <ul>
-        <li><a href="index.html">Classmates</a></li>
-        <li><a href="attendance.html">Attendance</a></li>
-        <li><a href="photos.html">Photos</a></li>
+        <li><a href="index.html">ᴄʟᴀꜱꜱᴍᴀᴛᴇꜱ</a></li>
+        <li><a href="attendance.html">ᴀᴛᴛᴇɴᴅᴀɴᴄᴇ</a></li>
+        <li><a href="photos.html">ᴄʟᴀꜱꜱ ʜɪɢʜʟɪɢʜᴛꜱ𓍼</a></li>
     </ul>
 </nav>
 
-<div class="card">
-    <h1>Attendance Tracker</h1>
+<div class="container">
+        <div class="card">
+            <h1>⋆.˚✮𝑨𝒕𝒕𝒆𝒏𝒅𝒂𝒏𝒄𝒆🎧𝑻𝒓𝒂𝒄𝒌𝒆𝒓✮˚.⋆</h1>
+            
+            <label>𑣲ꜱᴇʟᴇᴄᴛ ᴅᴀʏツ</label>
+            <select id="day-select">
+                <option value="0">𝙼𝚘𝚗𝚍𝚊𝚢(❁´◡`❁)</option>
+                <option value="1">𝚃𝚞𝚎𝚜𝚍𝚊𝚢ಥ_ಥ</option>
+                <option value="2">𝚆𝚎𝚍𝚗𝚎𝚜𝚍𝚊𝚢(^///^)</option>
+                <option value="3">𝚃𝚑𝚞𝚛𝚜𝚍𝚊𝚢(┬┬﹏┬┬)</option>
+                <option value="4">𝙵𝚛𝚒𝚍𝚊𝚢☆*: .｡. o(≧▽≦)o .｡.:*☆</option>
+            </select>
 
-    <label>Select Day</label>
+            <label>ᴀʙꜱᴇɴᴄᴇꜱ ࣪𖤐.ᐟ</label>
+            <input type="number" id="absence-input" placeholder="0">
 
-    <select id="day-select">
-        <option value="0">Monday</option>
-        <option value="1">Tuesday</option>
-        <option value="2">Wednesday</option>
-        <option value="3">Thursday</option>
-        <option value="4">Friday</option>
-    </select>
+            <button py-click="update_tracker">𝕊𝕦𝕓𝕞𝕚𝕥ᯓ✦</button>
+        </div>
 
-    <label>Absences</label>
+        <div id="graph-output"></div>
 
-    <input type="number"
-           id="absence-input"
-           placeholder="0">
-
-    <button py-click="update_tracker">
-        Submit
-    </button>
-</div>
-
-<div class="card">
-    <div id="graph-output"></div>
-</div>
-
-<py-script src="main.py"></py-script>
+    </div> <py-script src="main.py"></py-script>
 
 </body>
 </html>
