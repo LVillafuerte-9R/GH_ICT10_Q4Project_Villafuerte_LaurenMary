@@ -2,9 +2,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# =========================
 # CLASSMATE SYSTEM
-# =========================
 
 class Classmate:
     def __init__(self, name, section, favorite_subject):
@@ -51,10 +49,7 @@ def show_all_classmates(event):
                 target="output",
                 append=True)
 
-
-# =========================
 # ATTENDANCE TRACKER
-# =========================
 
 days = np.array([
     "Monday",
