@@ -2,34 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Class Photos</title>
-
     <link rel="stylesheet" href="style.css">
-
-    <link rel="stylesheet"
-          href="https://pyscript.net/releases/2024.3.1/core.css">
-
-    <script type="module"
-            src="https://pyscript.net/releases/2024.3.1/core.js"></script>
-
-    <py-config>
-    packages = ["numpy", "matplotlib"]
-</py-config>
+    
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.3.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.3.1/core.js"></script>
+    
+    <py-config> </py-config>
 </head>
-
 <body>
 
 <nav class="navbar">
     <h2 class="logo">𝑶.𝑩. 𝑾𝒆𝒃𝒔𝒊𝒕𝒆</h2>
-
     <ul>
         <li><a href="index.html">ᴄʟᴀꜱꜱᴍᴀᴛᴇꜱ</a></li>
         <li><a href="attendance.html">ᴀᴛᴛᴇɴᴅᴀɴᴄᴇ</a></li>
-        <li><a href="photos.html">ᴄʟᴀꜱꜱ ʜɪɢʜʟɪɢʜᴛꜱ𓍼</a></li>
+        <li><a href="photos.html">ᴄʟᴀꜱꜱ ʜɪɢʜʟɪɢʜᴛ舊</a></li>
     </ul>
 </nav>
 
@@ -40,19 +29,36 @@
 <py-script>
 from pyscript import display
 
-photos = [
-    {"src": "images/activity1.jpg", "caption": "ICT Coding Activity"},
-    {"src": "images/activity2.jpg", "caption": "Research Presentation"},
-    {"src": "images/activity3.jpg", "caption": "Group Collaboration"}
+# ==========================================
+# HOW TO EDIT YOUR PHOTOS:
+# 1. Place your image files inside a folder named 'images'.
+# 2. Change the "src" name below to match your filename.
+# 3. Type your description inside the "caption" section.
+# ==========================================
+
+class_photos = [
+    # Slot 1
+    {"src": "images/placeholder.jpg", "caption": "Activity 1 Caption (Edit me in HTML)"},
+    
+    # Slot 2
+    {"src": "images/placeholder.jpg", "caption": "Activity 2 Caption (Edit me in HTML)"},
+    
+    # Slot 3
+    {"src": "images/placeholder.jpg", "caption": "Activity 3 Caption (Edit me in HTML)"},
+    
+    # Slot 4
+    {"src": "images/placeholder.jpg", "caption": "Activity 4 Caption (Edit me in HTML)"}
 ]
 
-for p in photos:
-    display(f"""
+# This loop uses your existing CSS styles
+for p in class_photos:
+    html_content = f"""
     <div class='photo-card'>
-        <img src='{p["src"]}' class='photo'>
+        <img src='{p["src"]}' class='photo' alt='Class Photo'>
         <p>{p["caption"]}</p>
     </div>
-    """, target="photo-gallery", append=True)
+    """
+    display(html_content, target="photo-gallery", append=True)
 </py-script>
 
 </body>
