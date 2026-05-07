@@ -1,22 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <py-config>
-        packages = ['numpy', 'matplotlib']
-    </py-config>
-
     <meta charset="UTF-8">
-    <title>Attendance</title>
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Attendance Tracker</title>
 
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://pyscript.net/releases/2024.3.1/core.css" />
-    <script type="module" src="https://pyscript.net/releases/2024.3.1/core.js"></script>
+
+    <link rel="stylesheet"
+          href="https://pyscript.net/releases/2024.3.1/core.css">
+
+    <script type="module"
+            src="https://pyscript.net/releases/2024.3.1/core.js"></script>
+
+    <py-config>
+        packages = ["numpy", "matplotlib"]
+    </py-config>
 </head>
 
 <body>
 
 <nav class="navbar">
-    <h2 class="logo">Grade 10 ✦ Class Site</h2>
+    <h2 class="logo">Grade 10 ✦ ICT Website</h2>
+
     <ul>
         <li><a href="index.html">Classmates</a></li>
         <li><a href="attendance.html">Attendance</a></li>
@@ -27,6 +36,8 @@
 <div class="card">
     <h1>Attendance Tracker</h1>
 
+    <label>Select Day</label>
+
     <select id="day-select">
         <option value="0">Monday</option>
         <option value="1">Tuesday</option>
@@ -35,12 +46,20 @@
         <option value="4">Friday</option>
     </select>
 
-    <input type="number" id="absence-input" placeholder="Absences">
+    <label>Absences</label>
 
-    <button py-click="update_tracker">Submit</button>
+    <input type="number"
+           id="absence-input"
+           placeholder="0">
+
+    <button py-click="update_tracker">
+        Submit
+    </button>
 </div>
 
-<div id="graph-output"></div>
+<div class="card">
+    <div id="graph-output"></div>
+</div>
 
 <py-script src="main.py"></py-script>
 
