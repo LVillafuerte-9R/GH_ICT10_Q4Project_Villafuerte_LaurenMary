@@ -21,46 +21,38 @@
 
     <!-- NAVBAR -->
     <nav class="navbar">
-        <h2 class="logo">Grade 10 ✦ ICT Website</h2>
+        <h2 class="logo">𝑶.𝑩. 𝑾𝒆𝒃𝒔𝒊𝒕𝒆</h2>
 
         <ul>
-            <li><a href="index.html">Classmates</a></li>
-            <li><a href="attendance.html">Attendance</a></li>
-            <li><a href="photos.html">Photos</a></li>
+            <li><a href="index.html">ᴄʟᴀꜱꜱᴍᴀᴛᴇꜱ</a></li>
+            <li><a href="attendance.html">ᴀᴛᴛᴇɴᴅᴀɴᴄᴇ</a></li>
+            <li><a href="photos.html">ᴄʟᴀꜱꜱ ʜɪɢʜʟɪɢʜᴛꜱ𓍼</a></li>
         </ul>
     </nav>
 
     <!-- CLASSMATES -->
     <div class="card">
-        <h1>Grade 10 Classmates System</h1>
-
-        <input type="text" id="name-input" placeholder="Enter Name">
-
+        <h1>𝑮𝒓𝒂𝒅𝒆 10 𝑪𝒍𝒂𝒔𝒔𝒎𝒂𝒕𝒆𝒔 𝑺𝒚𝒔𝒕𝒆𝒎</h1>
+        <input type="text" id="name-input" placeholder="𝙴𝚗𝚝𝚎𝚛 𝙽𝚊𝚖𝚎">
         <select id="section-input">
-            <option value="Emerald">Emerald</option>
-            <option value="Ruby">Ruby</option>
-            <option value="Sapphire">Sapphire</option>
-            <option value="Topaz">Topaz</option>
+            <option value="𝗘𝗺𝗲𝗿𝗮𝗹𝗱">Emerald</option>
+            <option value="𝗥𝘂𝗯𝘆">Ruby</option>
+            <option value="𝗦𝗮𝗽𝗽𝗵𝗶𝗿𝗲">Sapphire</option>
+            <option value="𝗧𝗼𝗽𝗮𝘇">Topaz</option>
         </select>
-
-        <input type="text" id="subject-input" placeholder="Favorite Subject">
+        <input type="text" id="subject-input" placeholder="𝙵𝚊𝚟𝚘𝚛𝚒𝚝𝚎 𝚂𝚞𝚋𝚓𝚎𝚌𝚝">
 
         <div class="buttons">
-            <button py-click="add_new_classmate">Add Classmate</button>
-
-            <button py-click="show_all_classmates">
-                Show List
-            </button>
+            <button class="btn-add" py-click="add_new_classmate">ᴀᴅᴅ ᴄʟᴀꜱꜱᴍᴀᴛᴇ</button>
+            <button class="btn-show" py-click="show_all_classmates">ꜱʜᴏᴡ ʟɪꜱᴛ</button>
         </div>
     </div>
 
     <div class="list-card">
-        <h2>Classmate List</h2>
-
+        <h2>𝘾𝙡𝙖𝙨𝙨𝙢𝙖𝙩𝙚 𝙇𝙞𝙨𝙩</h2>
         <div id="output"></div>
     </div>
-
+    
     <py-script src="main.py"></py-script>
-
 </body>
 </html>
