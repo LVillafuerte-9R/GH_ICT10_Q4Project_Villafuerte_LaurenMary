@@ -31,9 +31,9 @@ from pyscript import display
 class_photos = [
     {"src": "foodfair.jpg", "caption": "This was the best fair we had and great teamwork."},
     {"src": "intrams.jpg", "caption": "Very competitive but still had a fun time."},
-    {"src": "jointcampout.jpg", "#LovingNature"},
+    {"src": "jointcampout.jpg", "caption": "#LovingNature"}, # Fixed: Added "caption" key here
 ]
-
+    
 for p in class_photos:
     flip_card = f"""
     <div class="flip-card">
