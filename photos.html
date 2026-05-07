@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Class Photos</title>
     <link rel="stylesheet" href="style.css">
-    
     <link rel="stylesheet" href="https://pyscript.net/releases/2024.3.1/core.css">
     <script type="module" src="https://pyscript.net/releases/2024.3.1/core.js"></script>
-    
     <py-config> </py-config>
 </head>
 <body>
@@ -18,7 +16,7 @@
     <ul>
         <li><a href="index.html">ᴄʟᴀꜱꜱᴍᴀᴛᴇꜱ</a></li>
         <li><a href="attendance.html">ᴀᴛᴛᴇɴᴅᴀɴᴄᴇ</a></li>
-        <li><a href="photos.html">ᴄʟᴀꜱꜱ ʜɪɢʜʟɪɢʜᴛ舊</a></li>
+        <li><a href="photos.html">ᴄʟᴀꜱꜱ ʜɪɢʜʟɪɢʜᴛꜱ𓍼</a></li>
     </ul>
 </nav>
 
@@ -29,36 +27,28 @@
 <py-script>
 from pyscript import display
 
-# ==========================================
-# HOW TO EDIT YOUR PHOTOS:
-# 1. Place your image files inside a folder named 'images'.
-# 2. Change the "src" name below to match your filename.
-# 3. Type your description inside the "caption" section.
-# ==========================================
-
+# EDIT YOUR PHOTOS HERE
 class_photos = [
-    # Slot 1
-    {"src": "images/placeholder.jpg", "caption": "Activity 1 Caption (Edit me in HTML)"},
-    
-    # Slot 2
-    {"src": "images/placeholder.jpg", "caption": "Activity 2 Caption (Edit me in HTML)"},
-    
-    # Slot 3
-    {"src": "images/placeholder.jpg", "caption": "Activity 3 Caption (Edit me in HTML)"},
-    
-    # Slot 4
-    {"src": "images/placeholder.jpg", "caption": "Activity 4 Caption (Edit me in HTML)"}
+    {"src": "images/photo1.jpg", "caption": "Add your description for photo 1 here!"},
+    {"src": "images/photo2.jpg", "caption": "Add your description for photo 2 here!"},
+    {"src": "images/photo3.jpg", "caption": "Add your description for photo 3 here!"},
+    {"src": "images/photo4.jpg", "caption": "Add your description for photo 4 here!"}
 ]
 
-# This loop uses your existing CSS styles
 for p in class_photos:
-    html_content = f"""
-    <div class='photo-card'>
-        <img src='{p["src"]}' class='photo' alt='Class Photo'>
-        <p>{p["caption"]}</p>
+    flip_card = f"""
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="{p['src']}" alt="Class Photo" class="photo">
+            </div>
+            <div class="flip-card-back">
+                <p>{p['caption']}</p>
+            </div>
+        </div>
     </div>
     """
-    display(html_content, target="photo-gallery", append=True)
+    display(flip_card, target="photo-gallery", append=True)
 </py-script>
 
 </body>
