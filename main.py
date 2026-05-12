@@ -24,7 +24,6 @@ classmates_list = [
 ]
 
 def add_new_classmate(event):
-    # Safety Check: Only run if we are on the Classmates page
     name_el = document.getElementById("name-input")
     if name_el:
         name = name_el.value
@@ -52,7 +51,6 @@ days = np.array(["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"])
 absences = np.array([0, 0, 0, 0, 0])
 
 def update_tracker(event):
-    # Safety Check: Only run if we are on the Attendance page
     day_el = document.getElementById("day-select")
     if day_el:
         day_index = int(day_el.value)
